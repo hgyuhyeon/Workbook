@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <string>
 #include "Student.h"
+#include "InputUtil.h"
 using namespace std;
 
 class Subject {
@@ -18,31 +19,18 @@ public:
 	Subject(const Subject& sub); //다른 Student클래스의 멤버변수 값으로 초기화
 	~Subject();
 
-	void InputValue(int& i) {
-		cin >> i;
-		cin.clear();
-		cin.ignore();
-	};
-	void InputValue(string& str) {
-		getline(cin, str);
-	};
 	void InputData() { //멤버변수 값 입력
-		cout << "\n\n* 수강한 과목의 각 교과목명, 과목학점, 과목등급을 입력하세요.\n";
 		cout << "교과목명: ";
-		InputValue(m_name); //정보 수정 시 중복을 막기 위해 초기화 x
+		InputUtil::InputValue(m_name); //정보 수정 시 중복을 막기 위해 초기화 x
 		cout << "과목학점수: ";
-		InputValue(m_hakjum);
+		InputUtil::InputValue(m_hakjum);
 		cout << "과목등급(A+ ~ F): ";
-		InputValue(m_grade);
+		InputUtil::InputValue(m_grade);
 		CalcGPA(); //평점 계산 후 구조체에 포함
 		cout << "\n";
 	};
-	void PrintTitle() { //멤버변수에 대한 title text 출력
-		cout << "-----------------------------------------------------\n";
-		cout << "   교과목명     학점수       등급         평점\n";
-		cout << "-----------------------------------------------------\n";
-	};
-	void PrintData() { //멤버변수 값 출력
+	static void PrintTitle();//멤버변수에 대한 title text 출력
+	void PrintData() const { //멤버변수 값 출력
 		cout.width(12);
 		cout << m_name;
 		cout.width(9);
@@ -91,30 +79,38 @@ public:
 	void Modify() { //과목정보 수정
 		cout << "\n\n* 수정할 '"<< m_name <<"' 과목의 각 교과목명, 과목학점, 과목등급을 입력하세요.\n";
 		cout << "교과목명: ";
-		InputValue(m_name); //정보 수정 시 중복을 막기 위해 초기화 x
+		InputUtil::InputValue(m_name); //정보 수정 시 중복을 막기 위해 초기화 x
 		cout << "과목학점수: ";
-		InputValue(m_hakjum);
+		InputUtil::InputValue(m_hakjum);
 		cout << "과목등급(A+ ~ F): ";
-		InputValue(m_grade);
+		InputUtil::InputValue(m_grade);
 		CalcGPA(); //평점 계산 후 구조체에 포함
 		cout << "\n";
 	}
 
 	//접근자 함수
-	string GetName() {
+	string GetName() const {
 		return m_name;
 	};
-	int GetHakjum() {
+	int GetHakjum() const {
 		return m_hakjum;
 	};
-	string GetGrade() {
+	string GetGrade() const {
 		return m_grade;
 	};
-	float GetGPA() {
+	float GetGPA() const {
 		return m_GPA;
 	};
 };
 
+/* 정적 멤버 함수 */
+void Subject::PrintTitle() { //멤버변수에 대한 title text 출력
+	cout << "-----------------------------------------------------\n";
+	cout << "   교과목명     학점수       등급         평점\n";
+	cout << "-----------------------------------------------------\n";
+};
+
+/* 생성자와 소멸자 */
 Subject::Subject() { //멤버변수 초기화
 	cout << "* 과목 생성자 호출 *\n";
 	m_name = " ";
