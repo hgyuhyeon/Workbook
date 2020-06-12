@@ -3,9 +3,10 @@
 #include <string>
 #include "Subject.h"
 #include "InputUtil.h"
+#include "IOInterface.h"
 using namespace std;
 
-class Student {
+class Student  : public IOInterface {
 protected:
 	string m_name;
 	int m_hakbun;
@@ -110,7 +111,7 @@ public:
 };
 
 Student::Student() { //멤버변수 초기화
-	cout << "* 학생 생성자 호출 *";
+	cout << "* 학생 생성자 호출 *\n";
 	m_name = " ";
 	m_hakbun = 0;
 	m_subnum = 0;
@@ -118,7 +119,7 @@ Student::Student() { //멤버변수 초기화
 	m_aveGPA = 0.0f;
 };
 
-Student::Student(string stdname, int hakbun, int subnum, Subject* subject) { //인자값으로 멤버변수 초기화
+Student::Student(string stdname, int hakbun, int subnum, Subject* subject) : IOInterface(stdname) { //인자값으로 멤버변수 초기화
 	cout << "* 학생 생성자 호출 *\n";
 	m_name = stdname;
 	m_hakbun = hakbun;
@@ -140,7 +141,7 @@ Student::Student(const Student& std) { //다른 Student클래스의 멤버변수
 };
 
 Student::~Student() { //소멸자, sub에 할당된 메모리 해제(Remove 함수 대체)
-	cout << "* 소멸자 호출 *\n";
+	cout << "* 학생 소멸자 호출 *\n";
 	if(m_sub)
 		delete[] m_sub;
 };
