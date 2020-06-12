@@ -4,9 +4,10 @@
 #include <string>
 #include "Student.h"
 #include "InputUtil.h"
+#include "IOInterface.h"
 using namespace std;
 
-class Subject {
+class Subject : public IOInterface {
 protected:
 	string m_name; //과목이름
 	int m_hakjum; //과목학점
@@ -119,7 +120,7 @@ Subject::Subject() { //멤버변수 초기화
 	m_GPA = 0.0f;
 };
 
-Subject::Subject(string subname, int hakjum, string grade) { //인자값으로 멤버변수 초기화
+Subject::Subject(string subname, int hakjum, string grade) : IOInterface(subname) { //인자값으로 멤버변수 초기화
 	cout << "* 과목 생성자 호출 *\n";
 	m_name = subname;
 	m_hakjum = hakjum;
@@ -136,5 +137,5 @@ Subject::Subject(const Subject& sub) { //다른 Student클래스의 멤버변수
 }
 
 Subject::~Subject() {
-
+	cout << "* 과목 소멸자 호출 *\n";
 };
