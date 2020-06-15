@@ -119,7 +119,7 @@ Student::Student() { //멤버변수 초기화
 	m_aveGPA = 0.0f;
 };
 
-Student::Student(string stdname, int hakbun, int subnum, Subject* subject) : IOInterface(stdname) { //인자값으로 멤버변수 초기화
+Student::Student(string stdname, int hakbun, int subnum, Subject* subject) { //인자값으로 멤버변수 초기화
 	cout << "* 학생 생성자 호출 *\n";
 	m_name = stdname;
 	m_hakbun = hakbun;
