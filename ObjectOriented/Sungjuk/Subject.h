@@ -120,7 +120,7 @@ Subject::Subject() { //멤버변수 초기화
 	m_GPA = 0.0f;
 };
 
-Subject::Subject(string subname, int hakjum, string grade) : IOInterface(subname) { //인자값으로 멤버변수 초기화
+Subject::Subject(string subname, int hakjum, string grade) { //인자값으로 멤버변수 초기화
 	cout << "* 과목 생성자 호출 *\n";
 	m_name = subname;
 	m_hakjum = hakjum;
