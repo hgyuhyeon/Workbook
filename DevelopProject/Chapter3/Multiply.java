@@ -14,8 +14,7 @@ public class Multiply {
 			}
 			catch(InputMismatchException e) {
 				System.out.println("실수는 입력하면 안 됩니다.");
-				scanner.next();
-				scanner.next();
+				scanner.nextLine();
 			}
 			
 		}
