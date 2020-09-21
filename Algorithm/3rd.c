@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define N 100
 
-
 /* Adjacency Matrix */
 int n;
 int adj_matrix[N][N];
@@ -21,7 +20,7 @@ void MatrixAd(int u) {
 	}
 	printf("\n");
 }
-//깊이
+//차수(진입 + 진출)
 void Matrixdeg(int u) {
 	int degree = 0;
 	for (int i = 0; i < N; i++) {
@@ -30,7 +29,6 @@ void Matrixdeg(int u) {
 	}
 	printf("차수: %d", degree);
 }
-
 
 /* Adjacency List */
 typedef struct _node { /* 각 노드 */
@@ -65,7 +63,7 @@ void ListAd(int u) {
 		p = p->next;
 	}
 }
-//깊이
+//차수(진출)
 void Listdeg(int u) {
 	Node* p = G->graph[u];
 	int degree = 0;
