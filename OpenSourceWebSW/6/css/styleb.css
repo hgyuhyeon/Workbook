@@ -1,0 +1,108 @@
+body {
+    margin: 0px 100px;
+}
+header {
+    background-color: rgb(176, 203, 214);
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 100px;
+}
+.logo {
+    position: relative;
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 200px;
+    height: 80px;
+}
+header .intro {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    color: white;
+    font-size: 27px;
+}
+header nav {
+    position: absolute;
+    top: 40px;
+    right: 15%;
+}
+ul {
+    text-align: center;
+}
+ul li {
+    display: inline;
+    margin-right: 10px;
+    border-radius: 7px;
+    background-color: white;
+    padding: 0px 5px;
+}
+ul li:hover {
+    background-color: gray;
+}
+ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+.info {
+    width: 60%;
+    padding: 30px 0px;
+    text-align: center;
+}
+.info .title {
+    font-size: 25px;
+    font-weight: 500;
+}
+.info hr {
+    border: dotted 1px;
+}
+.info .feedback {
+    display: inherit;
+    font-size: 20px;
+}
+.message {
+    width: auto;
+    height: 70px;
+    top: 50%;
+    right: 15%;
+    text-align: center;
+    background-color: rgb(176, 203, 214);
+    padding: 5px 20px;
+    position: fixed;
+    z-index: 10;
+}
+
+footer {
+    width: auto;
+    height: 150px;
+    background-color: rgb(176, 203, 214);
+    margin-bottom: 10px;
+}
+
+footer p {
+    padding: 10px 20px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        margin: 0px 50px;
+    }
+    header .intro {
+        top: 30px;
+        left: 300px;
+    }
+    header nav {
+        top: 60px;
+        left: 130px;
+    }
+    .info {
+        width: 60%;
+        padding: 30px 0px;
+    }
+    .message {
+        right: 5%;
+        padding: 5px 10px;
+    }
+}

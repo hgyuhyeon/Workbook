@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        .bg-1 {
+            background-color: #56a1c4;
+            /* Sky Blue */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .bg-4 {
+            background-color: #2c5264;
+            /* Deep Blue */
+            color: #fff;
+        }
+
+        .bg-5 {
+            background-color: #636363;
+            /* Black */
+            color: #fff;
+        }
+
+        .bg-6 {
+            background-color: #2f2f2f;
+            /* Black */
+            color: #fff;
+        }
+
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .navbar-nav li a:hover {
+            color: #56a1c4 !important;
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        .col-sm-4,
+        .col-sm-6,
+        .col-sm-12 {
+            margin: 25px 0px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .bg-2 {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .bg-3 {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Hwang Gyuhyeon</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#activity">ACTIVITY</a></li>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="about" class="container-fluid text-center bg-1">
+        <h3>Who Am I?</h3>
+        <img src="img/laptop.png" alt="me" class="img-circle" width="300px">
+        <h3>Hwang GyuHyeon<br>Student & developer</h3>
+        <p>
+            I am student at Chungbuk National University who is studying web development.<br>
+            Currently interested in Web backend / AI.<br>
+            Mainly do school project or club activity.<br>
+        </p>
+    </div>
+
+    <div id="activity" class="container-fluid bg-2 text-center">
+        <h3>Activities</h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>2019</h4>
+                CBNU Image processing club: NOVA | 2019.03 - 2019.12<br>
+            </div>
+            <div class="col-sm-4">
+                <h4>2020</h4>
+                CBNU Image processing club: NOVA | 2020.01 - 2020.12 | Secretary<br>
+                Chungbuk AI Education program basic course | 2020.09 - 2020.10<br>
+            </div>
+            <div class="col-sm-4">
+                <h4>2021</h4>
+                CBNU Image processing club: NOVA | 2021.01 - Present | Vice Presedent<br>
+                CBNU AI club: COSMIC | 2021.01 - Present<br>
+                LikeLion 9th | 2021.03 - Present<br>
+            </div>
+        </div>
+    </div>
+
+    <div id="work" class="container-fluid bg-3 text-center">
+        <button style="float: right; background-color: #7a7a7a;" class="btn btn-default btn-sm" onclick="">
+            <span class="glyphicon glyphicon-search"></span> Search</button>
+        <h3>Works</h3><br>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>When we meet?</h4>
+                <p style="text-align: right;">2020.09 - 2020.12</p>
+                <p style="text-align: left;">
+                    Leader | Chungbuk National University Open Source Development Project<br>
+                    - A web service that allows users to enter and manage schedules, apply user's preferences, and
+                    recommend appointment time for everyone to meet.<br>
+                    - Since this is my first web development project, it was able to learn basic server and backend
+                    knowledge.<br>
+                    Tech stack: Java, Tomcat, MariaDB, Git<br>
+                    Role: Team leader, server setup, backend development(multi room), system(project structure
+                    design, schedule CRUD & get empty time) implementation<br>
+                </p>
+                <img src="img/wwm.PNG" class="img-rounded img-responsive" style="width:100%; height: 300px;" alt="Image">
+            </div>
+            <div class="col-sm-6">
+                <h4>Give me some Meal Plan</h4>
+                <p style="text-align: right;">2020.03 - 2020.06</p>
+                <p style="text-align: left;">
+                    Chungbuk National University Open Source Fundamental Project<br>
+                    - A computer program what can run in a Windows environment recommends a diet according to the
+                    user's
+                    preference for calories and diet style.<br>
+                    - This is my first project that using multiple files at the base level, when only one source
+                    file
+                    was
+                    solving the example at the time, learning how to use GitHub.<br>
+                    Tech Stack: MySQL, Python<br>
+                    Role: Implementation of system architecture (filters, deliverables), DB processing<br>
+                </p>
+                <img src="img/meal.PNG" class="img-rounded img-responsive" style="width:100%; height: 300px;" alt="Image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>CV</h4>
+                <p style="text-align: right;">2021.01 - Present</p>
+                <p style="text-align: left;">
+                    - Created for organizing and recording activities so far and suggest for future direction.<br>
+                    - Learned how to read and use html, css.<br>
+                </p>
+                <img src="img/cv.PNG" class="img-rounded img-responsive" style="width:100%; height: 400px;" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="container-fluid bg-4 text-center">
+        <h3>Education</h3><br>
+        <p>
+            Chungbuk National University | Software science | Grade 3.71/4.5 | 2019 - Present<br>
+            Chungbuk AI Education program basic course 2nd certification | 2020.09 - 2020.10<br>
+            Chungbuk National University high school | 2016 - 2018 <br>
+        </p>
+    </div>
+
+    <div id="language" class="container-fluid bg-5 text-center">
+        <h3>Language</h3><br>
+        <h4>TOEIC</h4>
+        <p>840</p>
+    </div>
+
+    <footer id="contact" class="container-fluid bg-6 text-center">
+        <h4 style="margin-bottom: 1em;">Contact</h4>
+        <i class="fas fa-envelope"></i> hwgyuhyeon@gmail.com
+        &nbsp;/&nbsp;
+        <i class="fab fa-github"></i> <a style="text-decoration: none; color: white;"
+            href="https://github.com/hgyuhyeon">hgyuhyeon</a><br>
+
+        <p style="transform: translateY(5em); color: #555555">Bootstrap Theme Made By <a
+                href="https://www.w3schools.com">www.w3schools.com</a></p>
+    </footer>
+</body>
+
+</html>
